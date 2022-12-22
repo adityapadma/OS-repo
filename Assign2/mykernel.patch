@@ -1,0 +1,23 @@
+diff -r linux-6.0.9orig/arch/x86/entry/syscalls/syscall_64.tbl linux-6.0.9newnew/arch/x86/entry/syscalls/syscall_64.tbl
+375c375
+< 
+---
+> 451	common 	kernel_2d_memcpy	sys_kernel_2d_memcpy
+diff -r linux-6.0.9orig/kernel/sys.c linux-6.0.9newnew/kernel/sys.c
+1023a1024,1039
+> SYSCALL_DEFINE2(kernel_2d_memcpy, float**, matrix1, float**, matrix2)
+> {
+> 	float mat[2][2];
+> 	long temp_matrix = __copy_from_user(mat, matrix1, sizeof(mat));
+> 	long return_matrix = __copy_to_user(matrix2, mat, sizeof(mat));
+> 
+> 	if (temp_matrix<0)
+> 		return -EFAULT;
+> 
+> 	if (return_matrix<0)
+> 		return -EFAULT;
+> 
+> 	printk(KERN_INFO "Kernel_2d_memcpy syscall executed");
+> 
+> 	return temp_matrix;
+> }
