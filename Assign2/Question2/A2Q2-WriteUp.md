@@ -59,3 +59,10 @@ cp /boot/System.map-linuxAssign2 System.map
 grub-mkconfig -o /boot/grub/grub.cfg
 update-grub
 ```
+
+
+### Creating the Diff File. 
+- The following command creates the diff file which we can save as filename.patch.
+```bash
+diff linux-6.0.9orig linux-6.0.9newnew > filename.patch
+```
