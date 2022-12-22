@@ -1,5 +1,5 @@
-question1:
+question2:
 	echo "Question 1"
-	echo "Modified Dining Philosophers Problem"
+	echo "IPC"
 	gcc -o question1 question1.c
 	./question1
