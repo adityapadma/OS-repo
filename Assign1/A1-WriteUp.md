@@ -1,8 +1,8 @@
-## CSE231 - Operating Systems
+#### CSE231 - Operating Systems
 
-#### Assignment1 - Basic Linux/Unix Shell
+## Assignment1 - Basic Linux/Unix Shell
 
-## OS Assignment 1
+
 #### What To Submit
 
 - The C program sources.
