@@ -1,4 +1,0 @@
-run = "sh main.sh"
-
-[nix]
-channel = "stable-21_11"
